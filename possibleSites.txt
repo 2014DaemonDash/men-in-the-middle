@@ -1,0 +1,4 @@
+Possible Sites for Information:
+Air Quality: http://airnow.gov/index.cfm?action=airnow.main
+Water Quality: http://waterdata.usgs.gov/nwis
+Ozone Level: http://www.weather.com/activities/health/airquality/

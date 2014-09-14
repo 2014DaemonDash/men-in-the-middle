@@ -1,0 +1,85 @@
+<%
+  file = open("../data.json")
+  json = file.read
+  parsed = JSON.parse(json)
+
+  pollenCount = parsed["pollen"]
+  uvLevel = parsed["uv"]
+  airQuality = parsed["air"]
+  senator1Name = parsed["senator1"]["name"]
+  senator1Phone = parsed["senator1"]["phone"]
+  senator1Email = parsed["senator1"]["email"]
+  senator2Name = parsed["senator2"]["name"]
+  senator2Phone = parsed["senator2"]["phone"]
+  senator2Email = parsed["senator2"]["email"]
+
+%>
+
+<!--<div>
+  <%=pollenCount%>
+  <%=uvLevel%>
+  <%=airQuality%>
+  <p></p>
+
+    <%=senator1Name%>
+    <%=senator1Phone%>
+    <%=senator1Email%>
+    <%=senator2Name%>
+    <%=senator2Phone%>
+    <%=senator2Email%>
+
+</div>-->
+
+	<div class="row" id="levels">
+		<div class="large-4 columns">
+      <img src="http://whyfiles.org/wp-content/uploads/2013/02/bee_pollen2.jpg"/>
+      <h4><%=pollenCount%></h4>
+      <p>Based on the national standard a pollen level of Low-Medium is relatively normal. People with allergies to pollen may experience slight allergy symptoms due to this level.</p>
+    </div>
+
+    <div class="large-4 columns">
+      <img src="http://www.callcentertesting.com/images/clouds_picweb.jpg"/>
+      <h4><%=airQuality%></h4>
+      <p>Based on the national standard an air quality rating of Good is considered satisfactory, and air pollution poses little or no risk.</p>
+    </div>
+
+    <div class="large-4 columns">
+      <img src="http://s.hswstatic.com/gif/uv-radiation-1.jpg"/>
+      <h4><%=uvLevel%></h4>
+      <p>Based on the national standard a UV level of 7 means that there is a high risk of harm from unprotected sun exposure. Sunglasses and SPF 30+ sunscreen is recommended.</p>
+    </div>
+
+  <hr></hr>
+
+  <div class="row">
+    <div class="large-12 columns">
+
+      <div class="panel">
+        <center><h4>Contact Your Local Representatives About Pollution</h4></center>
+
+        <div class="row">
+          <div class="large-6 columns">
+            <%=senator1Name%><p>
+            <%=senator1Phone%><br>
+            <a href="http://www.cardin.senate.gov/contact/" class="radius button left"><%=senator1Email%></a>
+          </div>
+          <div class="large-6 columns" style="text-align:right">
+            <%=senator2Name%><p>
+            <%=senator2Phone%><br>
+            <a href="http://www.mikulski.senate.gov/contact/" class="radius button right"><%=senator2Email%></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="large-12 columns">
+      <div class="panel">
+      <div class="row">
+        <center><h4><a href="http://www.guidestar.org/nonprofit-directory/environment-animals/pollution/1.aspx">Donate to a Charity or Nonprofit Organization Dealing with Environmental Pollution</a></h4></center>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <hr></hr>
+  </div>
